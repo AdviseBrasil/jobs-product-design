@@ -1,0 +1,27 @@
+{
+    "node": true,
+    "esnext": true,
+    "bitwise": true,
+    "camelcase": true,
+    "curly": true,
+    "immed": true,
+    "newcap": true,
+    "noarg": true,
+    "undef": true,
+    "unused": "vars",
+    "strict": false,
+    "indent": true,
+    "latedef": true,
+    "noempty": true,
+    "quotmark": true,
+    "trailing": true,
+    "browser": true,
+    "globals": {
+        "jQuery": true,
+        "window": true,
+        "App": true,
+        "ZeroClipboard": true,
+		"CKEDITOR": true,
+		"Prism": true
+    }
+}

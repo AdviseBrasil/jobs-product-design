@@ -1,0 +1,17 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.umb {
+  background-image: url(../Images/Sprite.png);
+  background-position: 0px 0px;
+  width: 20px;
+  height: 21px;
+}
