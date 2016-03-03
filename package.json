@@ -1,0 +1,22 @@
+{
+  "name": "jobs-product-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdviseBrasil/jobs-product-design.git"
+  },
+  "author": "Advise",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdviseBrasil/jobs-product-design/issues"
+  },
+  "homepage": "https://github.com/AdviseBrasil/jobs-product-design#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
