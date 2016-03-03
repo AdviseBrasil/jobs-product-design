@@ -37,21 +37,21 @@ var gulp = require('gulp'),
 var CONFIG = {
 	PATH : {
 		SCRIPTS : {
-			ROOT: 'App/Source/Scripts/',
-			SRC: 'App/Source/Scripts/',
-			DEST: 'App/Build/Scripts/'
+			ROOT: 'App/Scripts/',
+			SRC: 'App/Scripts/',
+			DEST: 'Public/Scripts/'
 		},
 		STYLES: {
-			ROOT: 'App/Source/Styles/',
-			SCSS: 'App/Source/Styles/Scss/',
-			DEST: 'App/Build/Styles/'
+			ROOT: 'App/Styles/',
+			SCSS: 'App/Styles/Scss/',
+			DEST: 'Public/Styles/'
 		},
 		IMAGES: {
-			ROOT: 'App/Source/Images/',
-			SPRITE: 'App/Source/Images/Sprite/',
-			DEST: 'App/Build/Images/'
+			ROOT: 'App/Images/',
+			SPRITE: 'App/Images/Sprite/',
+			DEST: 'Public/Images/'
 		},
-		TEMPLATES: 'App/Source/Views/'
+		TEMPLATES: 'App/Views/'
 	}
 };
 
