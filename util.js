@@ -18,8 +18,7 @@ util.montarContato = function (body){
 }
 
 util.montarHtml = function (contato){
-	var html = '
-		<table>'
+	var html = '<table>'
 			+ '<tr>'
 				+ '<td>Nome: </td> <td>'+ contato.nome +'</td>'
 
