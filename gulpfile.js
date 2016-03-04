@@ -24,6 +24,7 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	wrap = require('gulp-wrap'),
 	declare = require('gulp-declare'),
+	rimraf = require('rimraf'),
 	browserSync = require('browser-sync'),
 	argv = require('yargs').argv,
 	hostPort = argv.port || 1000,
@@ -64,7 +65,7 @@ var CONFIG = {
 gulp.task('browserSync', function() {
 	browserSync({
 		server: {
-			baseDir: ''
+			baseDir: ['', 'public']
 		},
 		options: {
 			reloadDelay: 250
@@ -206,7 +207,7 @@ gulp.task('scripts:minify', ['scripts:jshint'], function() {
 gulp.task('images:minify', function() {
 
 	// Rota do diretório das imagens.
-	gulp.src(CONFIG.PATH.IMAGES.ROOT + '**/*')
+	gulp.src( ['!' + CONFIG.PATH.IMAGES.SPRITE, CONFIG.PATH.IMAGES.ROOT + '**/*', '!' + CONFIG.PATH.IMAGES.SPRITE + '**/*'] )
 
 	// Evita paralizar o watch e exibe erros.
 	.pipe(plumber())
@@ -216,6 +217,18 @@ gulp.task('images:minify', function() {
 
 	// Salva o arquivo final no diretório específico.
 	.pipe(gulp.dest(CONFIG.PATH.IMAGES.DEST));
+});
+
+
+
+gulp.task('images:minify', ['clean-img'], function() {
+    gulp.src( ['!' + CONFIG.PATH.IMAGES.SPRITE, CONFIG.PATH.IMAGES.ROOT + '**/*', '!' + CONFIG.PATH.IMAGES.SPRITE + '**/*'] )
+    .pipe( imagemin( { optimizationLevel: 5, progressive: true, interlaced: true } ) )
+    .pipe( gulp.dest( CONFIG.PATH.IMAGES.DEST ) );
+});
+
+gulp.task('clean-img', function (cb) {
+ return rimraf(CONFIG.PATH.IMAGES.DEST + '**/*',cb);
 });
 
 // Gera o arquivo Sprite.png
@@ -259,8 +272,10 @@ gulp.task('watch', ['browserSync'], function () {
 	//Html watch
 	gulp.watch(['**/*.html']).on('change', function() {
 		browserSync.reload();
-		console.log('rola');
 	});
+
+	//Images watch
+    gulp.watch([CONFIG.PATH.IMAGES.ROOT + '**/*', '!' + CONFIG.PATH.IMAGES.SPRITE + '**/*'], ['images:minify']);
 
 	//Styles watch
 	gulp.watch([CONFIG.PATH.STYLES.SCSS + '**/*.scss', '!' + CONFIG.PATH.STYLES.SCSS + 'sprite.scss'], ['styles']).on('change', reportChange);
