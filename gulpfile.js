@@ -204,7 +204,7 @@ gulp.task('scripts:minify', ['scripts:jshint'], function() {
 });
 
 // Comprimi as imagens e arquivos svg.
-gulp.task('images:minify', function() {
+gulp.task('images:minify', ['images:sprite', 'clean-img'], function() {
 
 	// Rota do diretório das imagens.
 	gulp.src( ['!' + CONFIG.PATH.IMAGES.SPRITE, CONFIG.PATH.IMAGES.ROOT + '**/*', '!' + CONFIG.PATH.IMAGES.SPRITE + '**/*'] )
@@ -217,14 +217,6 @@ gulp.task('images:minify', function() {
 
 	// Salva o arquivo final no diretório específico.
 	.pipe(gulp.dest(CONFIG.PATH.IMAGES.DEST));
-});
-
-
-
-gulp.task('images:minify', ['clean-img'], function() {
-    gulp.src( ['!' + CONFIG.PATH.IMAGES.SPRITE, CONFIG.PATH.IMAGES.ROOT + '**/*', '!' + CONFIG.PATH.IMAGES.SPRITE + '**/*'] )
-    .pipe( imagemin( { optimizationLevel: 5, progressive: true, interlaced: true } ) )
-    .pipe( gulp.dest( CONFIG.PATH.IMAGES.DEST ) );
 });
 
 gulp.task('clean-img', function (cb) {
@@ -248,7 +240,7 @@ gulp.task('images:sprite', function () {
 		}));
 
 	// Salva a imagem final no diretório específico.
-	spriteData.img.pipe(gulp.dest(CONFIG.PATH.IMAGES.DEST));
+	spriteData.img.pipe(gulp.dest(CONFIG.PATH.IMAGES.ROOT));
 
 	// Salva o arquivo final no diretório específico.
 	spriteData.css.pipe(gulp.dest(CONFIG.PATH.STYLES.SCSS));
