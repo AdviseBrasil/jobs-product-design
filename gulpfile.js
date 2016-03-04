@@ -37,21 +37,21 @@ var gulp = require('gulp'),
 var CONFIG = {
 	PATH : {
 		SCRIPTS : {
-			ROOT: 'App/Scripts/',
-			SRC: 'App/Scripts/',
-			DEST: 'Public/Scripts/'
+			ROOT: 'app/Scripts/',
+			SRC: 'app/Scripts/',
+			DEST: 'public/Scripts/'
 		},
 		STYLES: {
-			ROOT: 'App/Styles/',
-			SCSS: 'App/Styles/Scss/',
-			DEST: 'Public/Styles/'
+			ROOT: 'app/Styles/',
+			SCSS: 'app/Styles/Scss/',
+			DEST: 'public/Styles/'
 		},
 		IMAGES: {
-			ROOT: 'App/Images/',
-			SPRITE: 'App/Images/Sprite/',
-			DEST: 'Public/Images/'
+			ROOT: 'app/images/',
+			SPRITE: 'app/images/sprite/',
+			DEST: 'public/images/'
 		},
-		TEMPLATES: 'App/Views/'
+		TEMPLATES: 'app/Views/'
 	}
 };
 
@@ -79,23 +79,23 @@ gulp.task('styles', ['images:sprite'], function() {
 
 	// Ordena os arquivos por prioridade.
 	return gulp.src([
-		CONFIG.PATH.STYLES.SCSS + 'Base/Reset.scss',
-		CONFIG.PATH.STYLES.SCSS + 'Base/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'base/reset.scss',
+		CONFIG.PATH.STYLES.SCSS + 'base/*.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'Sprite.scss',
+		CONFIG.PATH.STYLES.SCSS + 'sprite.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'Helpers/*.scss',
-		CONFIG.PATH.STYLES.SCSS + 'Components/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'helpers/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'components/*.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'Layout/Grids.scss',
-		CONFIG.PATH.STYLES.SCSS + 'Layout/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'layout/grids.scss',
+		CONFIG.PATH.STYLES.SCSS + 'layout/*.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'Themes/Templates/*.scss',
-		CONFIG.PATH.STYLES.SCSS + 'Themes/Pages/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'themes/templates/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'themes/pages/*.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'Vendors/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'vendors/*.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'Common.scss'
+		CONFIG.PATH.STYLES.SCSS + 'common.scss'
 	])
 
 	// Evita paralizar o watch e exibe erros.
@@ -109,8 +109,8 @@ gulp.task('styles', ['images:sprite'], function() {
 	// Inicia o sourceMaps
 	.pipe(sourcemaps.init())
 
-	// Inclui todos SCSS os arquivos no App.scss.
-	.pipe(concat('App.scss'))
+	// Inclui todos SCSS os arquivos no app.scss.
+	.pipe(concat('app.scss'))
 
 	// Compila o que foi gerado do concat.
 	.pipe(sass({
@@ -126,10 +126,10 @@ gulp.task('styles', ['images:sprite'], function() {
 	// Exibe log's de erro.
 	.on('error', gutil.log)
 
-	// Minifica e gera o arquivo final App.css.
-	.pipe(cssminify('App.css'))
+	// Minifica e gera o arquivo final app.css.
+	.pipe(cssminify('app.css'))
 
-	// Gera o sourcemaps do arquivo final App.css.
+	// Gera o sourcemaps do arquivo final app.css.
 	.pipe(sourcemaps.write())
 
 	// Salva o arquivo final no diretório específico.
@@ -144,14 +144,14 @@ gulp.task('scripts:jshint', function() {
 
 	// Ordena os arquivos por prioridade.
 	return gulp.src([
-		CONFIG.PATH.SCRIPTS.SRC + 'Config.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Library/*.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Base/*.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Layout/*.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Modules/*.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Themes/*.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Utilities/*.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Common.js'
+		CONFIG.PATH.SCRIPTS.SRC + 'config.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'library/*.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'base/*.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'layout/*.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'modules/*.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'themes/*.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'utilities/*.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'common.js'
 	])
 
 	// Evita paralizar o watch e exibe erros.
@@ -172,22 +172,22 @@ gulp.task('scripts:minify', ['scripts:jshint'], function() {
 
 	// Ordena os arquivos por prioridade.
 	return gulp.src([
-		CONFIG.PATH.SCRIPTS.SRC + 'Config.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Plugins/**/*.js',
-        CONFIG.PATH.SCRIPTS.SRC + 'Library/**/*.js',
-    	CONFIG.PATH.SCRIPTS.SRC + 'Base/**/*.js',
-    	CONFIG.PATH.SCRIPTS.SRC + 'Layout/**/*.js',
-    	CONFIG.PATH.SCRIPTS.SRC + 'Modules/**/*.js',
-    	CONFIG.PATH.SCRIPTS.SRC + 'Themes/**/*.js',
-    	CONFIG.PATH.SCRIPTS.SRC + 'Utilities/**/*.js',
-    	CONFIG.PATH.SCRIPTS.SRC + 'Common.js'
+		CONFIG.PATH.SCRIPTS.SRC + 'config.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'plugins/**/*.js',
+        CONFIG.PATH.SCRIPTS.SRC + 'library/**/*.js',
+    	CONFIG.PATH.SCRIPTS.SRC + 'base/**/*.js',
+    	CONFIG.PATH.SCRIPTS.SRC + 'layout/**/*.js',
+    	CONFIG.PATH.SCRIPTS.SRC + 'modules/**/*.js',
+    	CONFIG.PATH.SCRIPTS.SRC + 'themes/**/*.js',
+    	CONFIG.PATH.SCRIPTS.SRC + 'utilities/**/*.js',
+    	CONFIG.PATH.SCRIPTS.SRC + 'common.js'
 	])
 
 	// Evita paralizar o watch e exibe erros.
 	.pipe(plumber())
 
-	// Inclui todos JS os arquivos no App.scss.
-	.pipe(concat('App.js'))
+	// Inclui todos JS os arquivos no app.scss.
+	.pipe(concat('app.js'))
 
 	// Responsável pela minificação do JS.
 	.pipe(uglify())
@@ -222,8 +222,8 @@ gulp.task('images:minify', function() {
 gulp.task('images:sprite', function () {
 	var spriteData = gulp.src(CONFIG.PATH.IMAGES.SPRITE + '*.png')
 		.pipe(spritesmith({
-			imgName: '../Images/Sprite.png',
-			cssName: 'Sprite.scss',
+			imgName: '../images/sprite.png',
+			cssName: 'sprite.scss',
 			cssFormat: 'css',
 			padding: 10,
 			cssOpts: {
@@ -263,7 +263,7 @@ gulp.task('watch', ['browserSync'], function () {
 	});
 
 	//Styles watch
-	gulp.watch([CONFIG.PATH.STYLES.SCSS + '**/*.scss', '!' + CONFIG.PATH.STYLES.SCSS + 'Sprite.scss'], ['styles']).on('change', reportChange);
+	gulp.watch([CONFIG.PATH.STYLES.SCSS + '**/*.scss', '!' + CONFIG.PATH.STYLES.SCSS + 'sprite.scss'], ['styles']).on('change', reportChange);
 
 	//Images watch
 	gulp.watch([CONFIG.PATH.IMAGES.SPRITE + '*.png'], ['styles']);
