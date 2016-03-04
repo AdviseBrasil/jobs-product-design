@@ -37,6 +37,7 @@
     "gulp.spritesmith": "^6.2.0",
     "jshint-stylish": "^2.1.0",
     "mandrill-api": "^1.0.45",
+    "rimraf": "^2.5.2",
     "yargs": "^4.1.0"
   }
 }
