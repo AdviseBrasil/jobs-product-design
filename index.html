@@ -20,8 +20,8 @@
 
 	<body>
 		<header class="header">
-			<a href="http://www.advisebrasil.com.br" target="_blank">
-				<img src="public/images/img-logo-advisebrasil.svg" alt="" />
+			<a href="http://www.advisebrasil.com.br" target="_blank" class="logo">
+				<img src="public/images/img-logo-advisebrasil.svg" alt="" width="150" />
 			</a>
 
 			<div class="container title">
@@ -126,7 +126,7 @@
 
 						<input type="text" name="sobrenome" placeholder="Sobrenome *" data-required />
 
-						<input type="text" name="email" placeholder="Email *" data-required />
+						<input type="text" name="email" placeholder="Email *" data-pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" data-required />
 
 						<input type="text" name="telefone" placeholder="Telefone" />
 
@@ -142,7 +142,7 @@
 
 						<input type="text" name="pretensao" placeholder="Pretensão salarial ? *" data-required />
 
-						<textarea name="descricao" placeholder="Diga-nos porque você gostaria de se juntar à nossa equipe e por que devemos contratá-lo. *"></textarea>
+						<textarea name="descricao" placeholder="Diga-nos porque você gostaria de se juntar à nossa equipe e por que devemos contratá-lo. *" data-required></textarea>
 
 						<button>Enviar</button>
 					</form>
@@ -152,13 +152,18 @@
 
 		<footer class="footer">
 			<div class="container">
-				<a href="http://www.advisebrasil.com.br" target="_blank">
-					<img src="" alt="" />
+				<a href="http://www.advisebrasil.com.br" target="_blank" class="logo">
+					<img src="public/images/img-logo-advisebrasil.svg" alt="" width="100" />
 				</a>
 
 				<p>© 2016 Advise Brasil. All Rights Reserved</p>
 			</div>
 		</footer>
+
+		<div class="success-contact">
+			<h2>Obrigado !</h2>
+			<p>Caso seu currículo seja selecionado entraremos em contato.</p>
+		</div>
 
 		<script type="text/javascript" src="public/scripts/app.js"></script>
 	</body>

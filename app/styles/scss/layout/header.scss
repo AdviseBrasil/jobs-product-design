@@ -1,7 +1,6 @@
 ﻿// ==========================================================================
 // Header
 // ==========================================================================
-
 .header {
 	position: relative;
 	float: left;
@@ -9,6 +8,13 @@
 	height: 360px;
 	background: $secondary-blue;
 	border-bottom: 10px solid #efefef;
+
+	.logo {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		z-index: 10;
+	}
 
 	h1 {
 		margin-top: 90px;
@@ -21,5 +27,19 @@
 	h1, h3 {
 		text-align: center;
 		color: $default-white;
+	}
+}
+
+@media screen and (max-width: 649px) {
+	.header {
+		.logo {
+			overflow: hidden;
+			width: 28px;
+
+			img {
+				width: 150px;
+				max-width: none;
+			}
+		}
 	}
 }
