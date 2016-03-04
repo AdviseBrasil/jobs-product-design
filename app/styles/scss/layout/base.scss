@@ -1,0 +1,41 @@
+// ==========================================================================
+// Base
+// ==========================================================================
+
+h1 {
+	font-family: $font-family-sans-serif;
+	font-size: 80px;
+	font-weight: $font-weight-bold;
+	letter-spacing: -2px;
+}
+
+h2 {
+	font-family: $font-family-sans-serif;
+	font-size: 28px;
+	font-weight: $font-weight-semibold;
+}
+
+h3 {
+	font-family: $font-family-sans-serif;
+	font-size: 25px;
+	font-weight: $font-weight-regular;
+}
+
+section {
+	position: relative;
+	float: left;
+	width: 100%;
+
+	&.bg {
+		&.--white {
+			background: $default-white;
+		}
+	}
+}
+
+p {
+	font-family: $font-family-sans-serif;
+	font-size: 20px;
+	font-weight: $font-weight-regular;
+	color: $color-base;
+}

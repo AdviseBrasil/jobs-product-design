@@ -37,21 +37,21 @@ var gulp = require('gulp'),
 var CONFIG = {
 	PATH : {
 		SCRIPTS : {
-			ROOT: 'app/Scripts/',
-			SRC: 'app/Scripts/',
-			DEST: 'public/Scripts/'
+			ROOT: 'app/scripts/',
+			SRC: 'app/scripts/',
+			DEST: 'public/scripts/'
 		},
 		STYLES: {
-			ROOT: 'app/Styles/',
-			SCSS: 'app/Styles/Scss/',
-			DEST: 'public/Styles/'
+			ROOT: 'app/styles/',
+			SCSS: 'app/styles/scss/',
+			DEST: 'public/styles/'
 		},
 		IMAGES: {
 			ROOT: 'app/images/',
 			SPRITE: 'app/images/sprite/',
 			DEST: 'public/images/'
 		},
-		TEMPLATES: 'app/Views/'
+		TEMPLATES: 'app/views/'
 	}
 };
 
@@ -80,20 +80,20 @@ gulp.task('styles', ['images:sprite'], function() {
 	// Ordena os arquivos por prioridade.
 	return gulp.src([
 		CONFIG.PATH.STYLES.SCSS + 'base/reset.scss',
-		CONFIG.PATH.STYLES.SCSS + 'base/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'base/**/*.scss',
 
 		CONFIG.PATH.STYLES.SCSS + 'sprite.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'helpers/*.scss',
-		CONFIG.PATH.STYLES.SCSS + 'components/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'helpers/**/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'components/**/*.scss',
 
 		CONFIG.PATH.STYLES.SCSS + 'layout/grids.scss',
-		CONFIG.PATH.STYLES.SCSS + 'layout/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'layout/**/*.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'themes/templates/*.scss',
-		CONFIG.PATH.STYLES.SCSS + 'themes/pages/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'themes/templates/**/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'themes/pages/**/*.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'vendors/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'vendors/**/*.scss',
 
 		CONFIG.PATH.STYLES.SCSS + 'common.scss'
 	])
