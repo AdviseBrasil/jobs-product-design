@@ -8,36 +8,36 @@
 
 @font-face {
 	font-family: 'Source Sans Pro';
-	src: url('fonts/SourceSansPro/sourcesanspro-regular-webfont.eot');
-	src: url('fonts/SourceSansPro/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-			url('fonts/SourceSansPro/sourcesanspro-regular-webfont.woff2') format('woff2'),
-			url('fonts/SourceSansPro/sourcesanspro-regular-webfont.woff') format('woff'),
-			url('fonts/SourceSansPro/sourcesanspro-regular-webfont.ttf') format('truetype'),
-			url('fonts/SourceSansPro/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+	src: url('/public/fonts/SourceSansPro/sourcesanspro-regular-webfont.eot');
+	src: url('/public/fonts/SourceSansPro/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-regular-webfont.woff2') format('woff2'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-regular-webfont.woff') format('woff'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-regular-webfont.ttf') format('truetype'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Source Sans Pro';
-	src: url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.eot');
-	src: url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-			url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.woff2') format('woff2'),
-			url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.woff') format('woff'),
-			url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.ttf') format('truetype'),
-			url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg');
+	src: url('/public/fonts/SourceSansPro/sourcesanspro-semibold-webfont.eot');
+	src: url('/public/fonts/SourceSansPro/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-semibold-webfont.woff') format('woff'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-semibold-webfont.ttf') format('truetype'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg');
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Source Sans Pro';
-	src: url('fonts/SourceSansPro/sourcesanspro-black-webfont.eot');
-	src: url('fonts/SourceSansPro/Fonts/SourceSansPro/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
-			url('fonts/SourceSansPro/sourcesanspro-black-webfont.woff2') format('woff2'),
-			url('fonts/SourceSansPro/sourcesanspro-black-webfont.woff') format('woff'),
-			url('fonts/SourceSansPro/sourcesanspro-black-webfont.ttf') format('truetype'),
-			url('fonts/SourceSansPro/sourcesanspro-black-webfont.svg#source_sans_problack') format('svg');
+	src: url('/public/fonts/SourceSansPro/sourcesanspro-black-webfont.eot');
+	src: url('/public/fonts/SourceSansPro/Fonts/SourceSansPro/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-black-webfont.woff2') format('woff2'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-black-webfont.woff') format('woff'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-black-webfont.ttf') format('truetype'),
+			url('/public/fonts/SourceSansPro/sourcesanspro-black-webfont.svg#source_sans_problack') format('svg');
 	font-weight: 800;
 	font-style: normal;
 }

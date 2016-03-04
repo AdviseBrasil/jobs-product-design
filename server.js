@@ -10,14 +10,14 @@ var util		= require('./util.js');
 
 var mandrill_client = new mandrill.Mandrill('nzwPw0xndLL5uzzTKwoEAQ');
 
-app.use(express.static(__dirname + '/public'));
+app.use('/public' , express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req,res){
 	res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.post('/send', function(req,res){
+app.post('/', function(req,res){
 
 	var mandrill_client = new mandrill.Mandrill('nzwPw0xndLL5uzzTKwoEAQ');
 	var contato = util.montarContato(req.body);
@@ -46,7 +46,7 @@ app.post('/send', function(req,res){
 		res.json({sucesso: false});
 	});
 
-	
+
 
 });
 

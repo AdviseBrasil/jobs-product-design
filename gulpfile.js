@@ -93,7 +93,7 @@ gulp.task('styles', ['images:sprite'], function() {
 		CONFIG.PATH.STYLES.SCSS + 'themes/templates/**/*.scss',
 		CONFIG.PATH.STYLES.SCSS + 'themes/pages/**/*.scss',
 
-		CONFIG.PATH.STYLES.SCSS + 'vendors/**/*.scss',
+		CONFIG.PATH.STYLES.SCSS + 'plugins/**/*.scss',
 
 		CONFIG.PATH.STYLES.SCSS + 'common.scss'
 	])
@@ -173,6 +173,7 @@ gulp.task('scripts:minify', ['scripts:jshint'], function() {
 	// Ordena os arquivos por prioridade.
 	return gulp.src([
 		CONFIG.PATH.SCRIPTS.SRC + 'config.js',
+		CONFIG.PATH.SCRIPTS.SRC + 'plugins/jquery.min.js',
         CONFIG.PATH.SCRIPTS.SRC + 'plugins/**/*.js',
         CONFIG.PATH.SCRIPTS.SRC + 'library/**/*.js',
     	CONFIG.PATH.SCRIPTS.SRC + 'base/**/*.js',
@@ -254,12 +255,12 @@ gulp.task('watch', ['browserSync'], function () {
 	function reportChange(event) {
 		console.log('\nEvent type: ' + event.type); // Adicinar, Alterar ou Deletar.
 		console.log('Event path: ' + event.path + '\n'); // O caminho onde foi modificado o arquivo.
+		console.log('rola');
 	};
 
 	//Html watch
 	gulp.watch(['**/*.html']).on('change', function() {
 		browserSync.reload();
-		console.log('rola');
 	});
 
 	//Styles watch

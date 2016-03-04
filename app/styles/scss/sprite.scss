@@ -9,6 +9,18 @@ Icon classes can be used entirely standalone. They are named after their origina
 <img class="icon-home" />
 ```
 */
+.ico-map {
+  background-image: url(../images/sprite.png);
+  background-position: -60px 0px;
+  width: 14px;
+  height: 20px;
+}
+.ico-timer {
+  background-image: url(../images/sprite.png);
+  background-position: -30px 0px;
+  width: 20px;
+  height: 19px;
+}
 .umb {
   background-image: url(../images/sprite.png);
   background-position: 0px 0px;

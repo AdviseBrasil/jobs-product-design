@@ -12,3 +12,39 @@
 		width: 700px;
 	}
 }
+
+@media (max-width: 1024px) and (min-width: 959px) {
+	.container {
+		width: 940px;
+
+		&.--small {
+			width: 700px;
+		}
+	}
+}
+
+
+@media (max-width: 960px) and (min-width: 650px) {
+	.container {
+		width: 630px;
+
+		&.--small {
+			width: 580px;
+		}
+	}
+}
+
+@media screen and (max-width: 649px) {
+	.container {
+		width: 100%;
+
+		&.--small {
+			width: 98%;
+		}
+	}
+}
+
+
+
+
+
