@@ -18,59 +18,32 @@ util.montarContato = function (body){
 }
 
 util.montarHtml = function (contato){
-	var html = '<table>'
-					+ '<thead>'
-						+ '<tr>'
-							+ '<th>Nome</th>'
+	var html = '
+		<table>'
+			+ '<tr>'
+				+ '<td>Nome: </td> <td>'+ contato.nome +'</td>'
 
-							+ '<th>Sobrenome</th>'
+				+ '<td>Sobrenome: </td> <td>' + contato.sobrenome + '</td>'
 
-							+ '<th>Email</th>'
+				+ '<td>Email: </td> <td> '+ contato.email +' </td>'
 
-							+ '<th>Telefone</th>'
+				+ '<td>Telefone: </td> <td> '+ contato.telefone +' </td>'
 
-							+ '<th>Celular</th>'
+				+ '<td>Celular: </td> <td> '+ contato.celular +' </td>'
 
-							+ '<th>Portifolio</th>'
+				+ '<td>Portifolio: </td> <td> '+ contato.portifolio +' </td>'
 
-							+ '<th>Linkedin</th>'
+				+ '<td>Linkedin: </td> <td> '+ contato.linkedin +' </td>'
 
-							+ '<th>Skype</th>'
+				+ '<td>Skype: </td> <td> '+ contato.skype +' </td>'
 
-							+ '<th>Website</th>'
+				+ '<td>Website: </td> <td> '+ contato.website +' </td>'
 
-							+ '<th>Pretensão</th>'
+				+ '<td>Pretensão: </td> <td> '+ contato.pretensao +' </td>'
 
-							+ '<th>Descricao</th>'
-						+ '</tr>'
-					+ '</thead>'
-
-					+ '<tbody>'
-						+ '<tr>'
-							+ '<td>'+ contato.nome +'</td>'
-
-							+ '<td>' + contato.sobrenome + '</td>'
-
-							+ '<td> '+ contato.email +' </td>'
-
-							+ '<td> '+ contato.telefone +' </td>'
-
-							+ '<td> '+ contato.celular +' </td>'
-
-							+ '<td> '+ contato.portifolio +' </td>'
-
-							+ '<td> '+ contato.linkedin +' </td>'
-
-							+ '<td> '+ contato.skype +' </td>'
-
-							+ '<td> '+ contato.website +' </td>'
-
-							+ '<td> '+ contato.pretensao +' </td>'
-
-							+ '<td> '+ contato.descricao +' </td>'
-						+ '</tr>'
-					+ '</tbody>'
-				+ '</table>';
+				+ '<td>Descricao: </td><td> '+ contato.descricao +' </td>'
+			+ '</tr>'
+		+ '</table>';
 
 	return html;
 }
