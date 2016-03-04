@@ -10,7 +10,7 @@ var util		= require('./util.js');
 
 var mandrill_client = new mandrill.Mandrill('nzwPw0xndLL5uzzTKwoEAQ');
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req,res){
