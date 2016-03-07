@@ -30,12 +30,20 @@
 					action: '/',
 					data: data,
 					beforeSend: function() {
-						_this.addClass('sending');
+						$('#contact-form').find('button').addClass('--animate');
+
+						setTimeout(function() {
+							$('#contact-form').find('button').remove();
+
+							$('.bar-loading').addClass('--animate');
+						},300);
+
+						$('#contact-form').addClass('sending');
 					},
 					success: function(response) {
 						if(response) {
-							$('main').remove();
-							$('.sucess-contact').addClass('--show');
+							$('body').css({'overflow-y': 'hidden'});
+							$('.success-contact , .bg-mask').addClass('--show');
 						} else {
 							console.log('deu ruim');
 						}

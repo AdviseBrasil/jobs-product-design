@@ -145,6 +145,12 @@
 						<textarea name="descricao" placeholder="Diga-nos porque você gostaria de se juntar à nossa equipe e por que devemos contratá-lo. *" data-required></textarea>
 
 						<button>Enviar</button>
+
+						<div class="bar-loading">
+							<span class="bg">
+								<span class="bar"></span>
+							</span>
+						</div>
 					</form>
 				</div>
 			</section>
@@ -160,9 +166,14 @@
 			</div>
 		</footer>
 
+		<div class="bg-mask --white"></div>
+
 		<div class="success-contact">
-			<h2>Obrigado !</h2>
-			<p>Caso seu currículo seja selecionado entraremos em contato.</p>
+			<div class="success-contact-message">
+				<img src="public/images/ico-complete.svg" alt=""/ >
+				<h2>Obrigado !</h2>
+				<p>Caso seu currículo seja selecionado entraremos em contato.</p>
+			</div>
 		</div>
 
 		<script type="text/javascript" src="public/scripts/app.js"></script>
