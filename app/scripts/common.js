@@ -27,18 +27,18 @@
 			if($(this).validate('isvalid')) {
 				$.ajax({
 					type: 'POST',
-					action: '/',
+					action: '/design',
 					data: data,
 					beforeSend: function() {
-						$('#contact-form').find('button').addClass('--animate');
+						_this.find('button').addClass('--animate');
 
 						setTimeout(function() {
-							$('#contact-form').find('button').remove();
+							_this.find('button').remove();
 
 							$('.bar-loading').addClass('--animate');
 						},300);
 
-						$('#contact-form').addClass('sending');
+						_this.addClass('sending');
 					},
 					success: function(response) {
 						if(response) {

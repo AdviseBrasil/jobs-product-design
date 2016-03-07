@@ -14,10 +14,14 @@ app.use('/public' , express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req,res){
+	res.redirect('/design');
+});
+
+app.get('/design', function(req,res){
 	res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.post('/', function(req,res){
+app.post('/design', function(req,res){
 
 	var mandrill_client = new mandrill.Mandrill('nzwPw0xndLL5uzzTKwoEAQ');
 	var contato = util.montarContato(req.body);
