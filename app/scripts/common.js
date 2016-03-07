@@ -44,6 +44,7 @@
 						if(response) {
 							$('body').css({'overflow-y': 'hidden'});
 							$('.success-contact , .bg-mask').addClass('show');
+							$('.bar-loading').remove();
 						} else {
 							console.log('deu ruim');
 						}
