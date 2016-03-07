@@ -30,12 +30,12 @@
 					action: '/design',
 					data: data,
 					beforeSend: function() {
-						_this.find('button').addClass('--animate');
+						_this.find('button').addClass('animate');
 
 						setTimeout(function() {
 							_this.find('button').remove();
 
-							$('.bar-loading').addClass('--animate');
+							$('.bar-loading').addClass('animate');
 						},300);
 
 						_this.addClass('sending');

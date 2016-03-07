@@ -85,7 +85,7 @@
 				background: #3C3C3C;
 			}
 
-			&.--animate {
+			&.animate {
 				padding: 5px 30px;
 				height: 25px;
 			}
@@ -111,7 +111,7 @@
 				}
 			}
 
-			&.--animate {
+			&.animate {
 				height: 25px;
 
 				.bg {
@@ -144,11 +144,11 @@
 	opacity: 0.9;
 	display: none;
 
-	&.--white {
+	&.white {
 		background: $default-white;
 	}
 
-	&.--show {
+	&.show {
 		display: block;
 	}
 }
@@ -196,7 +196,7 @@
 		}
 	}
 
-	&.--show {
+	&.show {
 		display: block;
 	}
 }

@@ -8,7 +8,7 @@
 	margin: 0 auto;
 	padding: 0 12px;
 
-	&.--small {
+	&.small {
 		width: 700px;
 	}
 }
@@ -17,7 +17,7 @@
 	.container {
 		width: 940px;
 
-		&.--small {
+		&.small {
 			width: 700px;
 		}
 	}
@@ -28,7 +28,7 @@
 	.container {
 		width: 630px;
 
-		&.--small {
+		&.small {
 			width: 580px;
 		}
 	}
@@ -38,7 +38,7 @@
 	.container {
 		width: 100%;
 
-		&.--small {
+		&.small {
 			width: 98%;
 		}
 	}
