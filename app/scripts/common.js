@@ -43,7 +43,7 @@
 					success: function(response) {
 						if(response) {
 							$('body').css({'overflow-y': 'hidden'});
-							$('.success-contact , .bg-mask').addClass('--show');
+							$('.success-contact , .bg-mask').addClass('show');
 						} else {
 							console.log('deu ruim');
 						}
